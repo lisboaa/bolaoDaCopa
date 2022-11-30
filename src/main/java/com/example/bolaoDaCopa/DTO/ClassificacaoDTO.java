@@ -1,4 +1,4 @@
-package com.bolaoDaCopa.DTO;
+package com.example.bolaoDaCopa.DTO;
 
 public class ClassificacaoDTO {
 

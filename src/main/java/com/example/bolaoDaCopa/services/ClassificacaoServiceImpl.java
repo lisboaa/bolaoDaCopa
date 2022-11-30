@@ -1,7 +1,7 @@
-package com.bolaoDaCopa.services;
+package com.example.bolaoDaCopa.services;
 
-import com.bolaoDaCopa.models.Classificacao;
-import com.bolaoDaCopa.repositories.ClassificacaoRepository;
+import com.example.bolaoDaCopa.models.Classificacao;
+import com.example.bolaoDaCopa.repositories.ClassificacaoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
