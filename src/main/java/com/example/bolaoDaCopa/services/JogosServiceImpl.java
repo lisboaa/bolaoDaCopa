@@ -4,6 +4,8 @@ import com.example.bolaoDaCopa.models.Jogos;
 import com.example.bolaoDaCopa.repositories.JogosRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class JogosServiceImpl implements JogosService {
     final JogosRepository jogosRepository;
