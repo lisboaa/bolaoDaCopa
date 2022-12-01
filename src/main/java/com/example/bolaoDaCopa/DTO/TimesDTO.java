@@ -2,7 +2,8 @@ package com.example.bolaoDaCopa.dto;
 import lombok.Data;
 @Data
 public class TimesDTO {
-
+    //id_time
+    //teste
     private Long id_time;
 
     private String nome_selecao;
