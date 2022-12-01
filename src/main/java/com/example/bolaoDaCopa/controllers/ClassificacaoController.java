@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api")
 @CrossOrigin
+
 public class ClassificacaoController {
     final ClassificacaoServiceImpl classificacaoServiceImpl;
 
@@ -22,7 +23,7 @@ public class ClassificacaoController {
         Classificacao response = classificacaoServiceImpl.salvar(classificacao);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-    @PostMapping(value = "/buscarClassificacao")
+    @GetMapping (value = "/buscarClassificacao")
     public ResponseEntity<Object>buscarClassificacao() {
         List<Classificacao> response = classificacaoServiceImpl.listar();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
