@@ -1,7 +1,10 @@
 package com.example.bolaoDaCopa.models;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -39,7 +42,7 @@ public class Usuario {
     @JoinTable(name = "usuario_endereco",
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_endereco"))
-    private Endereco endereco;
+    private com.example.bolaoDaCopa.models.Endereco endereco;
 
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
