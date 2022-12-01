@@ -12,8 +12,7 @@ import java.util.List;
 @RequestMapping(value = "/api")
 @CrossOrigin
 public class DocumentoController {
-
-
+    
         final DocumentoServiceImpl documentoServiceImpl;
 
         public DocumentoController(DocumentoServiceImpl documentoService) {

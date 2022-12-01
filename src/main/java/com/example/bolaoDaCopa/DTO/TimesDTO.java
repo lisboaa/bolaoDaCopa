@@ -1,5 +1,7 @@
-package com.example.bolaoDaCopa.dto;
+package com.example.bolaoDaCopa.DTO;
+
 import lombok.Data;
+
 @Data
 public class TimesDTO {
 

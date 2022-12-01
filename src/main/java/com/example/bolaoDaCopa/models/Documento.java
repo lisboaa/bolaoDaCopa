@@ -12,21 +12,23 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "documento")
+public class Documento {
 
-        public class Documento {
-            @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-            @Column(name = "id_documento")
-            private Long id_documento;
-            @Column(name = "cpf")
-            private String cpf;
-            @Column(name = "cnpj")
-            private String cnpj;
-            @Column(name = "rg")
-            private String rg;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_documento")
+    private Long id_documento;
 
-            public Object getNome() {
+    @Column(name = "cpf")
+    private String cpf;
+
+    @Column(name = "cnpj")
+    private String cnpj;
+
+    @Column(name = "rg")
+    private String rg;
+
+    public Object getNome() {
                 return null;
             }
-
-        }
+}

@@ -18,26 +18,26 @@ public class PalpitesController {
     }
 
     @PostMapping(value = "/salvarPalpites")
-    public ResponseEntity<Object> salvarPalpites(@RequestBody Palpites palpites) throws Exception{
-        Palpites response = palpitesServiceImpl.salvar(palpites);
+    public ResponseEntity<Object> salvarPalpites(@RequestBody Palpites palpites) {
+        Palpites response = palpitesServiceImpl.salvarPalpites(palpites);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping(value ="/buscarPalpites")
     public ResponseEntity<Object>buscarPalpites(){
-        List<Palpites> response = palpitesServiceImpl.listar();
+        List<Palpites> response = palpitesServiceImpl.listarPalpites();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PutMapping(value ="/alterarPalpites")
     public ResponseEntity<Object>alterarPalpites(@RequestBody Palpites palpites) {
-        Palpites response = palpitesServiceImpl.editar(palpites);
+        Palpites response = palpitesServiceImpl.editarPalpites(palpites);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @DeleteMapping(value = "/deletarPalpites")
     public ResponseEntity<Object>deletarPalpites(Long id_palpites) {
-        palpitesServiceImpl.deletar(id_palpites);
+        palpitesServiceImpl.deletarPalpites(id_palpites);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 

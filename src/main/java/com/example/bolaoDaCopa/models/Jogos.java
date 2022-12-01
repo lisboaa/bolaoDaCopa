@@ -10,6 +10,7 @@ import lombok.*;
 @Builder
 @Table(name="jogos")
 public class Jogos {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_jogos")

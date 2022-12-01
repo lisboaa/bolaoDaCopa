@@ -20,22 +20,22 @@ public class ClassificacaoController {
     }
     @PostMapping(value = "/salvarClassificacao")
     public ResponseEntity<Object>salvarClassificacao(@RequestBody Classificacao classificacao) {
-        Classificacao response = classificacaoServiceImpl.salvar(classificacao);
+        Classificacao response = classificacaoServiceImpl.salvarClassificacao(classificacao);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
     @GetMapping (value = "/buscarClassificacao")
     public ResponseEntity<Object>buscarClassificacao() {
-        List<Classificacao> response = classificacaoServiceImpl.listar();
+        List<Classificacao> response = classificacaoServiceImpl.listarClassificacao();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
     @PutMapping(value = "/alterarClassificacao")
     public ResponseEntity<Object>alterarClassificacao(@RequestBody Classificacao classificacao) {
-        Classificacao response = classificacaoServiceImpl.editar(classificacao);
+        Classificacao response = classificacaoServiceImpl.editarClassificacao(classificacao);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
     @DeleteMapping(value = "/deletarClassificacao")
     public ResponseEntity<Object>deletarClassificacao(Long id_classificacao) {
-        classificacaoServiceImpl.deletar(id_classificacao);
+        classificacaoServiceImpl.deletarClassificacao(id_classificacao);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

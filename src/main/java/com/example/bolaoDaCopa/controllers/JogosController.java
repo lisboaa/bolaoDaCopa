@@ -13,6 +13,7 @@ import java.util.List;
 @CrossOrigin
 
 public class JogosController {
+
     final JogosServiceImpl jogosServiceImpl;
 
     public JogosController(JogosServiceImpl jogosService) {
@@ -21,24 +22,24 @@ public class JogosController {
 
     @PostMapping(value = "/salvarJogos")
     public ResponseEntity<Object> salvarJogos(@RequestBody Jogos jogos) throws Exception {
-        Jogos response = jogosServiceImpl.salvar(jogos);
+        Jogos response = jogosServiceImpl.salvarJogos(jogos);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
     @GetMapping(value ="/buscarJogos")
     public ResponseEntity<Object>buscarJogos(){
-        List <Jogos> response = jogosServiceImpl.listar();
+        List <Jogos> response = jogosServiceImpl.listarJogos();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PutMapping(value ="/alterarJogos")
     public ResponseEntity<Object>alterarJogos(@RequestBody Jogos jogos) {
-        Jogos response = jogosServiceImpl.editar(jogos);
+        Jogos response = jogosServiceImpl.editarJogos(jogos);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @DeleteMapping(value = "/deletarJogos")
     public ResponseEntity<Object>deletarJogos(Long id_jogos) {
-        jogosServiceImpl.deletar(id_jogos);
+        jogosServiceImpl.deletarJogos(id_jogos);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

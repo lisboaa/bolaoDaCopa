@@ -11,8 +11,8 @@ import java.util.List;
 @RequestMapping(value = "/api")
 @CrossOrigin
 public class TimesController {
-    final TimesServiceImpl timesServiceImpl;
 
+    final TimesServiceImpl timesServiceImpl;
 
     public TimesController(TimesServiceImpl timesServiceImpl) throws Exception {
         this.timesServiceImpl = timesServiceImpl;
@@ -41,7 +41,5 @@ public class TimesController {
         timesServiceImpl.deletar(id_times);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-
-
 }
 
