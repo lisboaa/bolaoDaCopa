@@ -1,5 +1,6 @@
-package com.example.bolaoDaCopa.dto;
+package com.example.bolaoDaCopa.DTO;
 
+import com.example.bolaoDaCopa.models.Documento;
 import com.example.bolaoDaCopa.models.Endereco;
 import com.example.bolaoDaCopa.models.Palpites;
 import lombok.Data;
@@ -17,8 +18,8 @@ public class UsuarioDTO {
 
     private String contato;
 
-//    private Documento documento;
-//
+    private Documento documento;
+
     private Endereco endereco;
 
     private Palpites palpites;

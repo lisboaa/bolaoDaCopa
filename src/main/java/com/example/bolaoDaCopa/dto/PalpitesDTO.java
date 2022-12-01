@@ -1,5 +1,6 @@
-package com.example.bolaoDaCopa.dto;
+package com.example.bolaoDaCopa.DTO;
 
+import com.example.bolaoDaCopa.models.Times;
 import lombok.Data;
 
 @Data
@@ -17,6 +18,6 @@ public class PalpitesDTO {
 
     private Integer derrotas;
 
-//    private Times times;
+    private Times times;
 
 }
