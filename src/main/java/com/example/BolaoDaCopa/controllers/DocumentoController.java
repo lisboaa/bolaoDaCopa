@@ -1,6 +1,7 @@
-package com.example.BolaoDaCopa.controllers;
+package com.example.bolaoDaCopa.controllers;
 
 import com.example.BolaoDaCopa.models.Documento;
+import com.example.bolaoDaCopa.services.DocumentoServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

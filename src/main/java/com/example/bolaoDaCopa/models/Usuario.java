@@ -32,7 +32,7 @@ public class Usuario {
     @JoinTable(name = "usuario_documento",
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_documento"))
-    private Documento documento;
+    private com.example.BolaoDaCopa.models.Documento documento;
 
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
