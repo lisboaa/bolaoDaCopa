@@ -26,7 +26,7 @@ public class JogosController {
     }
     @GetMapping(value ="/buscarJogos")
     public ResponseEntity<Object>buscarJogos(){
-        List<Jogos> response = jogosServiceImpl.listar();
+        List <Jogos> response = jogosServiceImpl.listar();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
