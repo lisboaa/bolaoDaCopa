@@ -25,19 +25,19 @@ public class TimesController {
     }
 
     @GetMapping(value = "/buscarTimes")
-    public ResponseEntity<Object> buscarTimes(){
+    public ResponseEntity<Object> buscarTimes() throws  Exception{
         List<Times> response = timesServiceImpl.buscarTimes();
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PutMapping(value = "/editarTimes")
-    public ResponseEntity<Object> editarTimes(@RequestBody Times times){
+    public ResponseEntity<Object> editarTimes(@RequestBody Times times) throws Exception{
         Times response = timesServiceImpl.editar(times);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @DeleteMapping(value = "/deletarTimes")
-    public  ResponseEntity<Object> deletarTimes (Long id_times){
+    public  ResponseEntity<Object> deletarTimes(Long id_times) throws Exception{
         timesServiceImpl.deletar(id_times);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

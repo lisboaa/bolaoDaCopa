@@ -41,8 +41,8 @@ public class TimesServiceImpl implements com.example.bolaoDaCopa.services.TimesS
         return timesRepository.save(times);
     }
 
-    @Override
-    public void deletar(Long id_times) {
+    public void deletar(Long  id_times) {
+        timesRepository.deleteById(id_times);
 
     }
 }
