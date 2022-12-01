@@ -1,4 +1,4 @@
-package com.example.BolaoDaCopa.services;
+package com.example.bolaoDaCopa.services;
 
 import com.example.BolaoDaCopa.models.Documento;
 import com.example.BolaoDaCopa.repositories.DocumentoRepository;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
     @Service
-    public class DocumentoServiceImpl implements DocumentoService {
+    public class DocumentoServiceImpl implements com.example.BolaoDaCopa.services.DocumentoService {
 
         final DocumentoRepository documentoRepository;
 
