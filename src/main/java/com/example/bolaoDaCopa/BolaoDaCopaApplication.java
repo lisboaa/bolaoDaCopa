@@ -1,4 +1,4 @@
-package com.example.BolaoDaCopa;
+package com.example.bolaoDaCopa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

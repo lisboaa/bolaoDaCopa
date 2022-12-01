@@ -1,4 +1,4 @@
-package com.example.BolaoDaCopa.models;
+package com.example.bolaoDaCopa.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
