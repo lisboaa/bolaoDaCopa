@@ -1,7 +1,7 @@
-package com.bolaoDaCopa.controllers;
+package com.example.bolaoDaCopa.controllers;
 
-import com.bolaoDaCopa.models.Classificacao;
-import com.bolaoDaCopa.services.ClassificacaoServiceImpl;
+import com.example.bolaoDaCopa.models.Classificacao;
+import com.example.bolaoDaCopa.services.ClassificacaoServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

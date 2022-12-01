@@ -1,6 +1,6 @@
-package com.bolaoDaCopa.services;
+package com.example.bolaoDaCopa.services;
 
-import com.bolaoDaCopa.models.Classificacao;
+import com.example.bolaoDaCopa.models.Classificacao;
 
 import java.util.List;
 

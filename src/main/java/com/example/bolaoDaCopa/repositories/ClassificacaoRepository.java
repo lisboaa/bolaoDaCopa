@@ -1,6 +1,6 @@
-package com.bolaoDaCopa.repositories;
+package com.example.bolaoDaCopa.repositories;
 
-import com.bolaoDaCopa.models.Classificacao;
+import com.example.bolaoDaCopa.models.Classificacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

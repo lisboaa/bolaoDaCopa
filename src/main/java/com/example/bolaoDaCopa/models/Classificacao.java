@@ -1,4 +1,4 @@
-package com.bolaoDaCopa.models;
+package com.example.bolaoDaCopa.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
