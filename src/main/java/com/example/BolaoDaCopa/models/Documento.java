@@ -1,4 +1,4 @@
-package com.example.BolaoDaCopa.models;
+package com.example.bolaoDaCopa.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,8 +25,6 @@ import lombok.NoArgsConstructor;
             @Column(name = "rg")
             private String rg;
 
-            public Object getNome() {
-                return null;
-            }
+
 
         }

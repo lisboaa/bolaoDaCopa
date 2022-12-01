@@ -1,7 +1,8 @@
-package com.example.BolaoDaCopa.services;
+package com.example.bolaoDaCopa.services;
 
 
-import com.example.BolaoDaCopa.models.Documento;
+
+import com.example.bolaoDaCopa.models.Documento;
 
 import java.util.List;
 
