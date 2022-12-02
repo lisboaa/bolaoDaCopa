@@ -34,9 +34,9 @@ public class Palpites {
     @Column(name = "derrotas")
     private Integer derrotas;
 
-//    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
-//    @JoinTable(name = "usuario_times",
-//            joinColumns = @JoinColumn(name = "id_usuario"),
-//            inverseJoinColumns = @JoinColumn(name = "id_times"))
-//    private Times times;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @JoinTable(name = "palpites_times",
+            joinColumns = @JoinColumn(name = "id_palpites"),
+            inverseJoinColumns = @JoinColumn(name = "id_times"))
+    private Times times;
 }

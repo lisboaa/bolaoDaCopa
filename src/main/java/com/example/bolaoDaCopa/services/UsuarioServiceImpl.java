@@ -18,6 +18,19 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuario salvar(Usuario usuario) throws Exception {
         List<Usuario> listaDeUsuario = usuarioRepository.findAll();//vai ser utilizado quando for necessario as validaçoes
+        for (Usuario usuario1: listaDeUsuario) {
+            if (usuario1.getDocumento().getCpf() !=null && usuario1.getDocumento().getRg() != null){
+                throw new Exception("Por gentileza ensira um CPF e RG");
+            }
+            if (usuario.getDocumento().getCpf().equals(usuario1.getDocumento().getCpf()) && usuario.getDocumento().getRg().equals(usuario1.getDocumento().getRg())){
+                throw new Exception("Documentos ja existemte");
+            }
+            if (usuario1.getEndereco().getCep()!=null && usuario1.getEndereco().getNumero() !=null){
+                throw new Exception("Por gentileza Informe um CEP e um numero de residencia");
+            }
+
+        }
+
         return usuarioRepository.save(usuario);
     }
 
@@ -28,6 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario editar(Usuario usuario) {
+
         return usuarioRepository.save(usuario);
     }
 
