@@ -1,18 +1,12 @@
 package com.example.bolaoDaCopa.exceptions;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.time.Instant;
 import java.util.Arrays;
-//package com.example.projetointegrador.exceptions;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
-//import org.springframework.web.bind.annotation.ControllerAdvice;
-//import org.springframework.web.bind.annotation.ExceptionHandler;
-//import javax.servlet.http.HttpServletRequest;
-//import java.time.Instant;
-//import java.util.Arrays;
+
 @ControllerAdvice
 public class ControllerExceptionsHandler {
 
