@@ -2,6 +2,7 @@ package com.example.bolaoDaCopa.services;
 
 import com.example.bolaoDaCopa.models.Documento;
 import com.example.bolaoDaCopa.repositories.DocumentoRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,15 +28,24 @@ import java.util.List;
         }
 
         @Override
-        public Documento salvarDocumento(Documento documento)  {
+        public Documento salvarDocumento(Documento documento) {
+            List<Documento> listaDeDocumento = documentoRepository.findAll();
+            for (Documento valores : listaDeDocumento)
+                if (documento.getCpf().equals(valores.getCpf())) {
+                    throw new EntityNotFoundException("Esse CPF já esta cadastrado!");
+                } else if (documento.getRg().equals(valores.getRg())) {
+                    throw new EntityNotFoundException("Esse RG já esta cadastrado!");
+                }else if (documento.getCnpj().equals(valores.getCnpj())) {
+                    throw new EntityNotFoundException("Esse CNPJ já esta cadastrado!");
+                }
             return documentoRepository.save(documento);
         }
 
-        @Override
-        public void deletarDocumento(Long id_documento) {
+            @Override
+            public void deletarDocumento (Long id_documento){
             documentoRepository.deleteById(id_documento);
         }
-    }
+        }
 
 
 
