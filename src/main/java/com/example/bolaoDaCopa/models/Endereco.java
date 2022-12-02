@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Table (name = "endereco")
 public class Endereco {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_endereco")
@@ -35,5 +36,4 @@ public class Endereco {
 
     @Column(name = "estado")
     private String estado;
-
 }

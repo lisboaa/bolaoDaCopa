@@ -8,26 +8,29 @@ import java.util.List;
 
 @Service
 public class JogosServiceImpl implements JogosService {
+
     final JogosRepository jogosRepository;
+
     public JogosServiceImpl(JogosRepository jogosRepository) {
         this.jogosRepository = jogosRepository;
     }
+
     @Override
-    public Jogos salvar(Jogos jogos) throws Exception {
+    public Jogos salvarJogos(Jogos jogos) {
         return jogosRepository.save(jogos);
     } 
     @Override
-    public List <Jogos> listar() {
+    public List <Jogos> listarJogos() {
         return jogosRepository.findAll();
     }
 
     @Override
-    public Jogos editar(Jogos jogos) {
+    public Jogos editarJogos(Jogos jogos) {
         return jogosRepository.save(jogos);
     }
 
     @Override
-    public void deletar(Long id_jogos) {
+    public void deletarJogos(Long id_jogos) {
         jogosRepository.deleteById(id_jogos);
     }
 }

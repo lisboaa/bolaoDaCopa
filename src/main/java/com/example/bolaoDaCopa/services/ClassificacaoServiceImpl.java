@@ -14,19 +14,19 @@ public class ClassificacaoServiceImpl implements ClassificacaoService {
         this.classificacaoRepository = classificacaoRepository;
     }
     @Override
-    public List<Classificacao> listar(){
+    public List<Classificacao> listarClassificacao(){
         return classificacaoRepository.findAll();
     }
     @Override
-    public Classificacao editar(Classificacao classificacao) {
+    public Classificacao editarClassificacao(Classificacao classificacao) {
         return classificacaoRepository.save(classificacao);
     }
     @Override
-    public Classificacao salvar(Classificacao classificacao) {
+    public Classificacao salvarClassificacao(Classificacao classificacao) {
         return classificacaoRepository.save(classificacao);
     }
     @Override
-    public void deletar (Long id_classificacao) {
+    public void deletarClassificacao(Long id_classificacao) {
         classificacaoRepository.deleteById(id_classificacao);
     }
 }

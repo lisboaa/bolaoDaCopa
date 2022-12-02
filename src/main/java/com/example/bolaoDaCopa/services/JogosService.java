@@ -5,13 +5,8 @@ import com.example.bolaoDaCopa.models.Jogos;
 import java.util.List;
 
 public interface JogosService {
-    Jogos salvar(Jogos jogos) throws Exception;
-
-
-    List<Jogos> listar();
-
-
-    Jogos editar(Jogos jogos);
-
-    void deletar(Long id_jogos);
+    List<Jogos> listarJogos();
+    Jogos editarJogos(Jogos jogos);
+    Jogos salvarJogos(Jogos jogos);
+    void deletarJogos(Long id_jogos);
 }

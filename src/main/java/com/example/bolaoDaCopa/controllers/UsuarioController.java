@@ -19,7 +19,6 @@ public class UsuarioController {
         this.usuarioServiceImpl = usuarioService;
     }
 
-
     @PostMapping(value = "/salvarUsuario")
     public ResponseEntity<Object>salvarUsuario(@RequestBody Usuario usuario) throws Exception{
         Usuario response = usuarioServiceImpl.salvar(usuario);

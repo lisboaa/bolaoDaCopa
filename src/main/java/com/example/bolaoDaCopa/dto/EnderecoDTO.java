@@ -1,4 +1,4 @@
-package com.example.bolaoDaCopa.dto;
+package com.example.bolaoDaCopa.DTO;
 
 import lombok.Data;
 
@@ -6,10 +6,17 @@ import lombok.Data;
 public class EnderecoDTO {
 
     private Long id_endereco;
+
     private String logradouro;
+
     private String numero;
+
     private String referencia;
+
     private String cep;
+
     private String cidade;
+
     private String estado;
+
 }

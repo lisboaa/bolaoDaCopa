@@ -16,22 +16,22 @@ public class PalpitesServiceImpl implements PalpitesService{
     }
 
     @Override
-    public Palpites salvar(Palpites palpites) throws Exception {
+    public Palpites salvarPalpites(Palpites palpites) {
         return palpitesRepository.save(palpites);
     }
 
     @Override
-    public List<Palpites> listar() {
+    public List<Palpites> listarPalpites() {
         return palpitesRepository.findAll();
     }
 
     @Override
-    public Palpites editar(Palpites palpites) {
+    public Palpites editarPalpites(Palpites palpites) {
         return palpitesRepository.save(palpites);
     }
 
     @Override
-    public void deletar(Long id_palpites) {
+    public void deletarPalpites(Long id_palpites) {
         palpitesRepository.deleteById(id_palpites);
     }
 }
