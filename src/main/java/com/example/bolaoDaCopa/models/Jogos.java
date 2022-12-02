@@ -3,6 +3,8 @@ package com.example.bolaoDaCopa.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -22,7 +24,7 @@ public class Jogos {
     private String enfrentamento;
 
     @Column(name="dataDosJogos")
-    private String dataDosJogos;
+    private LocalDate dataDosJogos;
 
     @Column(name="classificações")
     private String classificações;
