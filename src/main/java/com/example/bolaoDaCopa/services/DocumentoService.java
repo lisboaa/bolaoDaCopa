@@ -11,7 +11,7 @@ public interface DocumentoService {
 
         Documento editarDocumento (Documento documento);
 
-        Documento salvarDocumento (Documento documento);
+        Documento salvarDocumento (Documento documento) throws Exception ;
 
         void deletarDocumento (Long id_documento);
     }

@@ -21,7 +21,7 @@ public class DocumentoController {
         }
 
         @PostMapping(value = "/salvarDocumento")
-        public ResponseEntity<Object> salvarDocumento(@RequestBody Documento documento)  {
+        public ResponseEntity<Object> salvarDocumento(@RequestBody Documento documento)throws Exception  {
             Documento response = documentoServiceImpl.salvarDocumento (documento);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
         }

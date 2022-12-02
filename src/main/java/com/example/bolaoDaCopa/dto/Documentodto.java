@@ -1,8 +1,7 @@
-package com.example.bolaoDaCopa.dto;
+package com.example.bolaoDaCopa.DTO;
 
 import lombok.Data;
 
-public class Documentodto {
     @Data
     public class DocumentoDTO {
         private Long id_documento;
@@ -10,4 +9,3 @@ public class Documentodto {
         private String cnpj;
         private String rg;
     }
-}

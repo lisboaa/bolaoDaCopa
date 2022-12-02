@@ -25,8 +25,5 @@ import lombok.NoArgsConstructor;
             @Column(name = "rg")
             private String rg;
 
-            public Object getNome() {
-                return null;
             }
 
-        }
