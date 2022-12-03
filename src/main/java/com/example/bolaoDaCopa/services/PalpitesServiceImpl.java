@@ -19,16 +19,17 @@ public class PalpitesServiceImpl implements PalpitesService{
     public Palpites salvar(Palpites palpites) throws Exception {
         List<Palpites> listaDePalpites = palpitesRepository.findAll();
         for (Palpites palpites1: listaDePalpites){
-            if(palpites1.getTimes().getNome_selecao() !=null){
-
+            if(palpites.getTimes().getNome_selecao() == null){
+                throw new Exception("Nome do time  não informado");
             }
-            if (palpites1.getVitorias() == null && palpites1.getImpates() == null && palpites1.getDerrotas() == null){
+            if (palpites.getVitorias() == null && palpites.getImpates() == null && palpites.getDerrotas() == null){
                 throw new Exception("Palpite não informado");
             }
-            if (palpites.getVitorias().equals(palpites1.getVitorias()) || palpites.getImpates().equals(palpites1.getImpates()) || palpites.getDerrotas().equals(palpites1.getDerrotas())){
-                throw new Exception("Palpite escolhido");
+             palpites.setArtilheiro(palpites1.getTimes().getNome_dos_jogadores());
+
+            if(palpites.getArtilheiro() == null){
+                throw new Exception("Artilheiro não informado");
             }
-            palpites.setArtilheiro(palpites.getTimes().getNome_dos_jogadores());
 
         }
         return palpitesRepository.save(palpites);

@@ -14,8 +14,8 @@ public class TimesController {
     final TimesServiceImpl timesServiceImpl;
 
 
-    public TimesController(TimesServiceImpl timesServiceImpl) throws Exception {
-        this.timesServiceImpl = timesServiceImpl;
+    public TimesController(TimesServiceImpl timesService) throws Exception {
+        this.timesServiceImpl = timesService;
     }
 
     @PostMapping(value = "/salvarTimes")
