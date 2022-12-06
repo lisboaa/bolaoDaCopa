@@ -1,4 +1,4 @@
-package com.example.BolaoDaCopa.dto;
+package com.example.bolaoDaCopa.dto;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.example.bolaoDaCopa.services;
 
-import com.example.BolaoDaCopa.models.Documento;
-import com.example.BolaoDaCopa.repositories.DocumentoRepository;
+import com.example.bolaoDaCopa.models.Documento;
+import com.example.bolaoDaCopa.repositories.DocumentoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

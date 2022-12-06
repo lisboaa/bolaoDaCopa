@@ -27,7 +27,7 @@ public class JogosServiceImpl implements JogosService {
         return jogosRepository.save(jogos);
     } 
     @Override
-    public List<Jogos> listar() {
+    public List <Jogos> listar() {
         return jogosRepository.findAll();
     }
 

@@ -17,6 +17,20 @@ public class PalpitesServiceImpl implements PalpitesService{
 
     @Override
     public Palpites salvar(Palpites palpites) throws Exception {
+        List<Palpites> listaDePalpites = palpitesRepository.findAll();
+        for (Palpites palpites1: listaDePalpites){
+            if(palpites1.getTimes().getNome_selecao() !=null){
+
+            }
+            if (palpites1.getVitorias() == null && palpites1.getImpates() == null && palpites1.getDerrotas() == null){
+                throw new Exception("Palpite não informado");
+            }
+            if (palpites.getVitorias().equals(palpites1.getVitorias()) || palpites.getImpates().equals(palpites1.getImpates()) || palpites.getDerrotas().equals(palpites1.getDerrotas())){
+                throw new Exception("Palpite escolhido");
+            }
+            palpites.setArtilheiro(palpites.getTimes().getNome_dos_jogadores());
+
+        }
         return palpitesRepository.save(palpites);
     }
 
