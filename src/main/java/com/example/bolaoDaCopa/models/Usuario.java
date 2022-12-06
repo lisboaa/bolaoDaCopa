@@ -35,14 +35,14 @@ public class Usuario {
     @JoinTable(name = "usuario_documento",
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_documento"))
-    private com.example.BolaoDaCopa.models.Documento documento;
+    private Documento documento;
 
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_endereco",
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_endereco"))
-    private com.example.bolaoDaCopa.models.Endereco endereco;
+    private Endereco endereco;
 
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.PERSIST}, fetch = FetchType.EAGER)
